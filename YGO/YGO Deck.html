@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <script src="Bootstrap/jquery.min.js"></script>
+    <script src="Bootstrap/popper.min.js"></script>
+    <script src="Bootstrap/bootstrap.min.js"></script>
+    <link href="css/css_Deck.css" rel="stylesheet" />
+    <title>Yu-Gi-Oh! Deck</title>
+    <link rel="shortcut icon" href="images/yugioh.ico">
+</head>
+
+<body>
+    <div class="container abc">
+        <div class="row">
+            <div class="col-3 bb">
+                <ul class="bb_1">
+                    <li>
+                        <a href="YGO Start.html">
+                            <img src="images/b1.png" alt="">
+                            <h2>遊戲方式</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="YGO Deck.html">
+                            <img src="images/b2.png" alt="">
+                            <h2>各種牌組</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ntucgm.com/">
+                            <img src="images/b3.png" alt="">
+                            <h2>電子競技</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.yugioh-card.com/hk/?lang=cn-t">
+                            <img src="images/b4.png" alt="">
+                            <h2>官方網站</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="YGO.html">
+                            <img src="images/b5.png" alt="">
+                            <h2>回到首頁</h2>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9">
+                <h3>各種牌組&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <input type="text" size=8 id="search">
+                    <input type="button" id="button" onclick="doSearch($('#search').val())" value="查詢">
+                </h3>
+                <hr>
+                <h4>本網站收錄了各種主題和賽場上出現的牌組供各位玩家參考。<br>
+                    內容將不定期更新，歡迎各位投稿文章。<br>
+                    聯絡方式:sao48763@gmail.com
+                </h4>
+                <hr>
+                <div class="Deck">
+                    <div>
+                        <a href="Deck EXORSISTER.html">
+                            <img src="images/e1.png" alt="">
+                            <p>【主題牌組】「驅魔修女」牌組介紹（エクソシスター／EXORSISTER）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="Deck SKY STRIKER.html">
+                            <img src="images/e2.png" alt="">
+                            <p>【主題牌組】「閃刀」牌組介紹（閃刀／SKY STRIKER）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="Deck CODE TALKER.html">
+                            <img src="images/e3.png" alt="">
+                            <p>【主題牌組】「碼語者」牌組介紹（コード．トーカー／CODE TALKER）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/e4.png" alt="">
+                            <p>【主題牌組】「靈使／憑依」牌組介紹（霊使い／憑依／FAMILIAR-POSSESSED）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/e5.png" alt="">
+                            <p>【主題牌組】「拉比林斯」牌組介紹（ラビュリンス／LABRYNTH）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/e6.png" alt="">
+                            <p>【自訂主題】「遊星流／廢品二重身」牌組（ジャンクドッペル／JUNK DOPPEL）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/e7.png" alt="">
+                            <p>【主題牌組】「S－FORCE」牌組介紹（セキュリティ・フォース／SECURITY FORCE）</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/e8.png" alt="">
+                            <p>【主題牌組】「@伊格尼斯星」牌組介紹（@IGNISTER／@イグニスター）</p>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a href="YGO Deck_2.html">
+                        <p class="float-right">下一頁</p>
+                    </a>
+                </div>
+                <form name="p0">
+                    <br>
+                    <h4>沒有想要的嗎?那就上傳一個吧!</h4>
+                    <hr>
+                    <h5>你的暱稱</h5>
+                    <input name="p1" type="text" placeholder="如何稱呼你" required="required">
+                    <h5>牌組標題</h5>
+                    <input name="p2" type="text" placeholder="如:超越極限加速同步" required="required">
+                    <h5>牌組類別</h5>
+                    <select>
+                        <option value="">主題牌組</option>
+                        <option value="">自訂主題</option>
+                    </select>
+                    <h5>牌組內容</h5>
+                    <textarea name="p3" class="test" type="text" placeholder="想要說什麼呢?" required="required"></textarea>
+                    <h5>
+                        上傳圖片<br>
+                        選擇要上傳的圖片，請附上牌組圖
+                        <br><br>
+                        <form action="/somewhere/to/upload" enctype="multipart/form-data">
+                            <input name="" type="file" accept="image/gif, image/jpeg, image/png" multiple>
+                        </form>
+                        <br>
+                        <br>
+                        <button class="button_1" onclick="mod()">提交</button>
+                    </h5>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function mod() {
+            if (document.p0.p1.value == "") {
+                alert("暱稱不可為空");
+            } else if (document.p0.p2.value == "") {
+                alert("標題不可為空");
+            } else if (document.p0.p3.value == "") {
+                alert("內容不可為空");
+            } else {
+                alert("我收到囉!");
+            }
+        }
+
+
+        var input = document.getElementById("search");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("button").click();
+            }
+        });
+        function doSearch(text) {
+            var isfound = 0;
+            if (find && getSelection) {
+                document.designMode = "on";
+                var sel = getSelection();
+                sel.collapseToEnd();
+                isfound = 0;
+                while (find(text)) {
+                    $("#button").blur();
+                    document.execCommand("HiliteColor", false, "aquamarine");
+                    sel.collapseToEnd();
+                    isfound = 1;
+                }
+                if (isfound == 0) {
+                    alert('查詢沒有結果');
+                }
+                document.designMode = "off";
+            }
+        }
+    </script>
+</body>
+
+</html>
